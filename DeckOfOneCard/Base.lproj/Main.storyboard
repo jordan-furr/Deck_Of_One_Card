@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WjC-ZT-Z2D">
+                                <rect key="frame" x="73" y="256.5" width="268" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="393" id="fNB-H0-SBF"/>
+                                    <constraint firstAttribute="width" constant="268" id="keK-y7-OpL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value/suit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-Ql-Ozc">
+                                <rect key="frame" x="160.5" y="184" width="93" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34j-hb-2mc">
+                                <rect key="frame" x="182" y="687.5" width="50" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="yyB-Kz-C83"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pbp-Ql-Ozc" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="Dzb-pA-N6d"/>
+                            <constraint firstItem="WjC-ZT-Z2D" firstAttribute="top" secondItem="Pbp-Ql-Ozc" secondAttribute="bottom" constant="45.5" id="JpL-YL-qxX"/>
+                            <constraint firstItem="WjC-ZT-Z2D" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="SFg-fh-QsR"/>
+                            <constraint firstItem="34j-hb-2mc" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="T1y-mo-W1q"/>
+                            <constraint firstItem="WjC-ZT-Z2D" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="aXC-sg-GZK"/>
+                            <constraint firstItem="34j-hb-2mc" firstAttribute="top" secondItem="WjC-ZT-Z2D" secondAttribute="bottom" constant="38" id="dwv-mh-C52"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="WjC-ZT-Z2D" id="V5o-mE-QuI"/>
+                        <outlet property="valueSuitLabel" destination="Pbp-Ql-Ozc" id="oqO-MU-iiR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.21739130434787" y="-254.46428571428569"/>
+        </scene>
+    </scenes>
+</document>
